@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Product OPTIMA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdn.jsdelivr.net/gh/impress/impress.js@1.1.0/js/impress.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/impress/impress.js@1.1.0/js/impress.js" defer></script>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -178,15 +178,17 @@
 
   </div>
 
-  <script>
-    var root = impress();
-    root.init();
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var root = impress();
+      root.init();
 
-    document.addEventListener("impress:stepenter", function (event) {
-      event.target.classList.add("active");
-    });
-    document.addEventListener("impress:stepleave", function (event) {
-      event.target.classList.remove("active");
+      document.addEventListener("impress:stepenter", function (event) {
+        event.target.classList.add("active");
+      });
+      document.addEventListener("impress:stepleave", function (event) {
+        event.target.classList.remove("active");
+      });
     });
   </script>
 </body>

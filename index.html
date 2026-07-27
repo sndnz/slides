@@ -6,35 +6,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://unpkg.com/impress.js@1.1.0/js/impress.js"></script>
   <style>
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background: #111827;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: radial-gradient(ellipse at center, #1b2340 0%, #05060d 70%);
       color: #f9fafb;
       margin: 0;
       overflow: hidden;
+      perspective: 1200px;
+    }
+    #impress {
+      perspective: 1200px;
     }
     .step {
       width: 900px;
-      padding: 40px 60px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.06);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+      padding: 50px 70px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.09), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow:
+        0 30px 60px rgba(0,0,0,0.55),
+        0 4px 12px rgba(0,0,0,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.15);
+      backdrop-filter: blur(6px);
+      transition: box-shadow 0.6s, opacity 0.6s;
     }
-    h1, h2 { margin-top: 0; color: #60a5fa; }
-    ul { line-height: 1.6; }
+    .step.active {
+      box-shadow:
+        0 40px 90px rgba(56,189,248,0.25),
+        0 4px 20px rgba(0,0,0,0.5),
+        inset 0 1px 0 rgba(255,255,255,0.25);
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 3em;
+      background: linear-gradient(90deg, #60a5fa, #34d399);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 2px 30px rgba(96,165,250,0.4);
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 2.2em;
+      color: #60a5fa;
+      text-shadow: 0 2px 20px rgba(96,165,250,0.3);
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.5em;
+      background: rgba(52,211,153,0.15);
+      color: #34d399;
+      border: 1px solid rgba(52,211,153,0.4);
+      border-radius: 999px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    ul { line-height: 1.9; font-size: 1.15em; padding-left: 1.2em; }
+    li { margin-bottom: 6px; }
+    p { font-size: 1.2em; line-height: 1.6; }
     .accent { color: #34d399; }
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 18px 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    #impress-toolbar { opacity: 0.5; }
+    .fallback-message { padding: 40px; text-align: center; }
   </style>
 </head>
 <body>
-  <div id="impress">
+  <div id="impress"
+       data-transition-duration="1000"
+       data-perspective="1200">
 
-    <div class="step" data-x="0" data-y="0" data-scale="1.2">
+    <div class="step" data-x="0" data-y="0" data-z="0" data-scale="1.3">
+      <span class="badge">Welcome</span>
       <h1>Product OPTIMA</h1>
-      <p class="accent">A 10-slide impress.js presentation</p>
+<p class="accent">A 3D journey through the future of operations</p>
     </div>
 
-    <div class="step" data-x="1200" data-y="0">
-      <h2>1. The Problem</h2>
+    <div class="step" data-x="-1400" data-y="0" data-z="-800" data-rotate-y="-40" data-scale="1">
+      <span class="badge">01</span>
+      <h2>The Problem</h2>
       <ul>
         <li>Teams lose time across fragmented workflows.</li>
         <li>Operational visibility is incomplete.</li>
@@ -42,22 +106,26 @@
       </ul>
     </div>
 
-    <div class="step" data-x="2400" data-y="0">
-      <h2>2. The Solution</h2>
+    <div class="step" data-x="-2800" data-y="-200" data-z="200" data-rotate-y="30" data-scale="1.1">
+      <span class="badge">02</span>
+      <h2>The Solution</h2>
       <p>OPTIMA unifies monitoring, coordination, and execution in one product experience.</p>
     </div>
 
-    <div class="step" data-x="3600" data-y="0">
-      <h2>3. Product Overview</h2>
-      <ul>
-        <li>Centralized dashboard</li>
-        <li>Actionable alerts</li>
-        <li>Workflow automation</li>
-      </ul>
+    <div class="step" data-x="-4400" data-y="400" data-z="-400" data-rotate-x="15" data-scale="1">
+      <span class="badge">03</span>
+      <h2>Product Overview</h2>
+      <div class="card-grid">
+        <div class="card">Centralized dashboard</div>
+        <div class="card">Actionable alerts</div>
+        <div class="card">Workflow automation</div>
+        <div class="card">Live analytics</div>
+      </div>
     </div>
 
-    <div class="step" data-x="4800" data-y="0">
-      <h2>4. Core Features</h2>
+    <div class="step" data-x="-6000" data-y="-300" data-z="600" data-rotate-y="-25" data-rotate-x="-10" data-scale="1.15">
+      <span class="badge">04</span>
+      <h2>Core Features</h2>
       <ul>
         <li>Real-time insights</li>
         <li>Smart prioritization</li>
@@ -65,13 +133,15 @@
       </ul>
     </div>
 
-    <div class="step" data-x="6000" data-y="0">
-      <h2>5. How It Works</h2>
+    <div class="step" data-x="-7800" data-y="300" data-z="-600" data-rotate="8" data-scale="1">
+      <span class="badge">05</span>
+      <h2>How It Works</h2>
       <p>OPTIMA ingests signals, analyzes context, and guides users toward the next best action.</p>
     </div>
 
-    <div class="step" data-x="7200" data-y="0">
-      <h2>6. Benefits</h2>
+    <div class="step" data-x="-9600" data-y="-400" data-z="400" data-rotate-y="35" data-scale="1.1">
+      <span class="badge">06</span>
+      <h2>Benefits</h2>
       <ul>
         <li>Faster response times</li>
         <li>Higher operational clarity</li>
@@ -79,17 +149,20 @@
       </ul>
     </div>
 
-    <div class="step" data-x="8400" data-y="0">
-      <h2>7. Use Cases</h2>
-      <ul>
-        <li>Operations teams</li>
-        <li>Product leadership</li>
-        <li>Customer support</li>
-      </ul>
+    <div class="step" data-x="-11400" data-y="200" data-z="-300" data-rotate-x="-20" data-scale="1">
+      <span class="badge">07</span>
+      <h2>Use Cases</h2>
+      <div class="card-grid">
+        <div class="card">Operations teams</div>
+        <div class="card">Product leadership</div>
+        <div class="card">Customer support</div>
+        <div class="card">Field engineering</div>
+      </div>
     </div>
 
-    <div class="step" data-x="9600" data-y="0">
-      <h2>8. Roadmap</h2>
+    <div class="step" data-x="-13200" data-y="-200" data-z="500" data-rotate-y="-30" data-scale="1.1">
+      <span class="badge">08</span>
+      <h2>Roadmap</h2>
       <ul>
         <li>Expanded analytics</li>
         <li>AI-assisted recommendations</li>
@@ -97,20 +170,24 @@
       </ul>
     </div>
 
-    <div class="step" data-x="10800" data-y="0">
-      <h2>9. Why OPTIMA</h2>
-      <p>Built to simplify complexity and help teams execute with confidence.</p>
-    </div>
-
-    <div class="step" data-x="12000" data-y="0" data-scale="1.3">
-      <h2>10. Thank You</h2>
-      <p class="accent">Product OPTIMA</p>
+    <div class="step" data-x="-15000" data-y="0" data-z="0" data-scale="1.4" data-rotate="0">
+      <span class="badge">Thank You</span>
+      <h1>Product OPTIMA</h1>
+      <p class="accent">Built to simplify complexity, in three dimensions.</p>
     </div>
 
   </div>
 
   <script>
-    impress().init();
+    var root = impress();
+    root.init();
+
+    document.addEventListener("impress:stepenter", function (event) {
+      event.target.classList.add("active");
+    });
+    document.addEventListener("impress:stepleave", function (event) {
+      event.target.classList.remove("active");
+    });
   </script>
 </body>
 </html>

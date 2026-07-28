@@ -80,25 +80,46 @@ table { width: 100%; border-collapse: collapse; font-size: 0.9em; margin-top: 10
 table td, table th { border-bottom: 1px solid rgba(255,255,255,0.15); padding: 6px 10px; text-align: left; }
 #impress-toolbar { opacity: 0.5; }
 .fallback-message { padding: 40px; text-align: center; }
+.title-hero {
+  background:
+    linear-gradient(145deg, rgba(5,6,13,0.86), rgba(5,6,13,0.55)),
+    url('assets/Dr._Strangelove_poster.png');
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+.title-hero h1 { text-shadow: 0 2px 30px rgba(0,0,0,0.8); }
+.title-hero h2 { color: #e5e7eb; text-shadow: 0 2px 20px rgba(0,0,0,0.85); }
 </style>
 </head>
 <body>
 <div id="impress" data-transition-duration="1000" data-perspective="1200">
 
-<div class="step" data-x="0" data-y="0" data-z="0" data-scale="1.3">
+<div class="step title-hero" data-x="0" data-y="0" data-z="0" data-scale="1.3">
   <span class="badge">Me</span>
   <h1>Who am I? </h1>
   <h2>Or: how I learned to stop worrying and make project Optima a lasting product to help people with prostate, breast and lung cancer</h2>
 </div>
 
+<div class="step" data-x="-1400" data-y="-150" data-z="120" data-rotate-y="15" data-scale="1.15">
+  <span class="badge">About Me</span>
+  <h2>About Me</h2>
+  <ul>
+    <li>20 years in web development</li>
+    <li>Transformed New Zealand's largest website from waterfall to <span class="accent">cross-functional teams</span> and agile delivery</li>
+    <li>Moved the Southern Hemisphere's largest bank from 6-monthly out-of-hours deployments to <span class="accent">weekly deployments</span> for all customer-facing interfaces</li>
+    <li>Led two teams extending the indicated population of a <span class="accent">Class III Software as a Medical Device</span> through development and Food and Drug Administration 510(k) clearance</li>
+  </ul>
+</div>
+
 <div class="step" data-x="-2800" data-y="-200" data-z="200" data-rotate-y="30" data-scale="1.1">
   <span class="badge">01</span>
   <h2>What is Project OPTIMA?</h2>
-  <p>An IMI/EU consortium building an AI-driven data platform to improve <span class="accent">guideline-based decision support</span> for prostate, breast and lung cancer, combining real-world data, guideline logic and federated AI.</p>
+  <p>An Innovative Medicines Initiative/European Union consortium building an Artificial Intelligence-driven data platform to improve <span class="accent">guideline-based decision support</span> for prostate, breast and lung cancer, combining real-world data, guideline logic and federated Artificial Intelligence.</p>
   <ul>
-    <li>Coordinated by EAU &amp; Pfizer, ~30 partners (academia, EFPIA industry, SMEs)</li>
-    <li>Core Minimum Viable Product: a platform unifying data, guidelines and AI models for clinicians</li>
-    <li>Runs 60 months across 9 Work Packages (WP1-WP9)</li>
+    <li>Coordinated by European Association of Urology &amp; Pfizer, ~30 partners (academia, European Federation of Pharmaceutical Industries and Associations industry, Small and Medium-sized Enterprises)</li>
+    <li>Core Minimum Viable Product: a platform unifying data, guidelines and Artificial Intelligence models for clinicians</li>
+    <li>Runs 60 months across 9 Work Packages (Work Package 1 through Work Package 9)</li>
   </ul>
 </div>
 
@@ -115,7 +136,7 @@ table td, table th { border-bottom: 1px solid rgba(255,255,255,0.15); padding: 6
 
 <div class="step" data-x="-6000" data-y="-300" data-z="600" data-rotate-y="-25" data-rotate-x="-10" data-scale="1.15">
   <span class="badge">03</span>
-  <h2>Platform architecture (WP4/WP5)</h2>
+  <h2>Platform architecture (Work Package 4/Work Package 5)</h2>
   <ul>
     
   </ul>
@@ -124,7 +145,7 @@ table td, table th { border-bottom: 1px solid rgba(255,255,255,0.15); padding: 6
 <div class="step" data-x="-7800" data-y="300" data-z="-600" data-rotate="8" data-scale="1">
   <span class="badge">04</span>
   <h2>Risk from this</h2>
-  <p>As <span class="accent">Software Development Lead</span>, I sit at the intersection of WP3 (guideline tool), WP4 (architecture) and WP5 (deployment) - turning existing components into one coherent, user-centred product.</p>
+  <p>As <span class="accent">Software Development Lead</span>, I sit at the intersection of Work Package 3 (guideline tool), Work Package 4 (architecture) and Work Package 5 (deployment) - turning existing components into one coherent, user-centred product.</p>
   <ul>
  
   </ul>
@@ -134,7 +155,7 @@ table td, table th { border-bottom: 1px solid rgba(255,255,255,0.15); padding: 6
 <div class="step" data-x="-20400" data-y="-400" data-z="500" data-rotate-y="-20" data-scale="1.1">
   <span class="badge">11</span>
   <h2>Beyond the grant: building a real product</h2>
-  <p>A funded project ends in month 60. A <span class="accent">product</span> outlives it. My contribution isn't just delivering WP4/WP5 tasks - it's building the engineering foundations, culture and architecture that let OPTIMA keep evolving as a sustainable platform (WP9) long after the consortium disbands.</p>
+  <p>A funded project ends in month 60. A <span class="accent">product</span> outlives it. My contribution isn't just delivering Work Package 4/Work Package 5 tasks - it's building the engineering foundations, culture and architecture that let OPTIMA keep evolving as a sustainable platform (Work Package 9) long after the consortium disbands.</p>
   <ul>
     <li>Iterative delivery lifecycle that maximises learning</li>
     <li>An empowered, governed and automated delivery culture</li>
@@ -149,7 +170,7 @@ table td, table th { border-bottom: 1px solid rgba(255,255,255,0.15); padding: 6
   <p>Short cycles turn every sprint into a learning opportunity, not just a delivery obligation.</p>
   <ul>
     <li>Short, time-boxed iterations with a real demo and retro every cycle</li>
-    <li>Continuous discovery: user/clinician feedback feeds directly into the next iteration (WP3 Task 3.7 loop)</li>
+    <li>Continuous discovery: user/clinician feedback feeds directly into the next iteration (Work Package 3 Task 3.7 loop)</li>
     <li>Fast feedback over big-bang releases: ship thin slices, validate, adjust</li>
     <li>Retrospectives treated as a first-class ceremony - actions tracked, not just discussed</li>
     <li>Roadmap held loosely: re-prioritised each cycle against real evidence, not fixed upfront</li>
@@ -164,7 +185,7 @@ table td, table th { border-bottom: 1px solid rgba(255,255,255,0.15); padding: 6
     <div class="card"><h3>Empowered</h3>Engineers own their slice end-to-end: design, build, ship, support</div>
     <div class="card"><h3>Continuous</h3>Small, frequent changes via trunk-based development &amp; feature flags</div>
     <div class="card"><h3>Governed</h3>Clear decision rights - Scientific Governance Board for clinical impact, engineering leads for technical calls, gated and audited at the enviroment level for every component.</div>
-    <div class="card"><h3>Automated</h3>CI/CD enforces the guardrails (tests, linting, security scans) so governance doesn't mean gatekeeping</div>
+    <div class="card"><h3>Automated</h3>Continuous Integration/Continuous Deployment enforces the guardrails (tests, linting, security scans) so governance doesn't mean gatekeeping</div>
   </div>
 </div>
 
@@ -173,10 +194,10 @@ table td, table th { border-bottom: 1px solid rgba(255,255,255,0.15); padding: 6
   <h2>Architecture: two speeds, one platform</h2>
   <p>Not every part of OPTIMA should change at the same pace - the architecture should make that safe, not accidental.</p>
   <ul>
-    <li><span class="accent">Non-clinical concerns</span> (auth, infra, DevOps tooling, UI shells, integrations) - modular, decoupled, high-frequency deployment</li>
-    <li><span class="accent">Clinical domains</span> (guideline logic, AI models, decision support) - deliberate cadence, strong validation gates, Scientific Governance Board sign-off</li>
-    <li>Clear API/FHIR boundaries between the two so one never blocks the other</li>
-    <li>Same modular philosophy already in WP4 Task 4.3 - I'd extend it as an explicit engineering principle, not just a technical pattern</li>
+    <li><span class="accent">Non-clinical concerns</span> (auth, infra, DevOps tooling, User Interface shells, integrations) - modular, decoupled, high-frequency deployment</li>
+    <li><span class="accent">Clinical domains</span> (guideline logic, Artificial Intelligence models, decision support) - deliberate cadence, strong validation gates, Scientific Governance Board sign-off</li>
+    <li>Clear API/Fast Healthcare Interoperability Resources boundaries between the two so one never blocks the other</li>
+    <li>Same modular philosophy already in Work Package 4 Task 4.3 - I'd extend it as an explicit engineering principle, not just a technical pattern</li>
   </ul>
 </div>
 
